@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Side Scroller – Mahanthi Kannapalli</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body class="project-page" style="--project-bg: url('images/side-scroller.png');" data-loader-focus="gameplay physics combat render" data-loader-title="SIDE SCROLLER" data-loader-tag="Loading traversal">
+
+  <!-- LOADER (must be inside body) -->
+  <div id="loader" aria-hidden="true">
+    <div class="star-core"></div>
+    <div class="star-wave wave-1"></div>
+    <div class="star-wave wave-2"></div>
+    <div class="star-particles">
+      <span></span><span></span><span></span><span></span><span></span>
+      <span></span><span></span><span></span><span></span><span></span>
+    </div>
+  </div>
+
+  <!-- NAVBAR -->
+<nav class="navbar" aria-label="Primary">
+    <a href="index.html" class="logo brandmark" aria-label="Mahanthi Kannapalli — home"><span class="logo-badge" aria-hidden="true"><span class="logo-bracket">[</span><span class="logo-mono">MK</span><span class="logo-bracket">]</span></span><span class="logo-word"><span class="logo-first">MAHANTHI</span><span class="logo-last">KANNAPALLI</span></span></a>
+
+    <!-- Mobile toggle (only shows on small screens) -->
+    <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false">
+        <span class="nav-toggle-icon" aria-hidden="true">
+            <span></span><span></span><span></span>
+        </span>
+    </button>
+
+    <ul class="nav-links">
+    <li>
+        <a href="index.html#about">
+            <i class="bx bx-user"></i>
+            <span>About</span>
+        </a>
+    </li>
+
+    <li>
+        <a href="index.html#projects">
+            <i class="bx bx-briefcase-alt-2"></i>
+            <span>Projects</span>
+        </a>
+    </li>
+
+    <li>
+        <a href="index.html#systems">
+            <i class="bx bx-network-chart"></i>
+            <span>Systems</span>
+        </a>
+    </li>
+
+    <li>
+        <a href="index.html#contact">
+            <i class="bx bx-envelope"></i>
+            <span>Contact</span>
+        </a>
+    </li>
+    </ul>
+</nav>
+
+<!-- Mobile overlay (click to close) -->
+<div class="nav-overlay" hidden></div>
+
+
+  <div class="project-glass">
+
+    <!-- HERO -->
+    <header class="project-hero">
+      <div class="project-hero-overlay">
+        <span class="sys-eyebrow center"><span class="dot"></span> // GAME_MODULE · TRAVERSAL_SYSTEMS</span>
+        <h1>Side Scroller</h1>
+        <p>3D Side Scroller Game – Unreal Engine</p>
+
+        <div class="project-hero-tags" aria-label="Tags">
+          <span>Unreal Engine</span>
+          <span>3D</span>
+          <span>Side Scroller</span>
+        </div>
+      </div>
+    </header>
+
+    <main class="project-content">
+
+      <!-- VIDEO -->
+      <section class="project-video-section">
+        <h2 class="section-title">EXPRESSION</h2>
+
+        <div class="expression-image-block">
+          <img src="images/side-scroller.png" alt="Expression Image" loading="lazy">
+        </div>
+
+        <h2 class="section-title">GAMEPLAY VIDEO</h2>
+
+        <!-- NOTE: Your current src is not a valid embed URL.
+             Replace with a real YouTube embed like:
+             https://www.youtube.com/embed/VIDEO_ID
+        -->
+        <iframe
+          src="www.gyoutube.com/mmmunnnadfj.00"
+          title="Side Scroller Gameplay"
+          frameborder="0"
+          loading="lazy"
+          allowfullscreen
+        ></iframe>
+      </section>
+
+      <!-- ACCORDION -->
+      <section class="project-accordion-section">
+        <h2 class="section-title">SYSTEMS &amp; RESPONSIBILITIES</h2>
+
+        <div class="accordion">
+
+          <!-- ITEM 1 -->
+          <div class="accordion-item open">
+            <button class="accordion-header" type="button" aria-expanded="true">
+              <div class="accordion-left">
+                <i class="bx bx-transfer-alt" aria-hidden="true"></i>
+                <span class="accordion-title">DASH SYSTEM</span>
+              </div>
+              <span class="accordion-toggle-icon" aria-hidden="true">+</span>
+            </button>
+
+            <div class="accordion-content">
+              <p>
+                For the dash mechanic, I created this Blueprint in the
+                SideScroller character to allow the player to quickly
+                move forward with a burst of speed. When the dash key is
+                pressed, it checks if the dash is available, then adds
+                forward velocity based on the player’s facing direction.
+                I also used a line trace to detect collisions so the player
+                doesn’t pass through obstacles. A particle effect is spawned
+                during the dash for visual feedback, and a delay node controls
+                both the dash duration and cooldown. Once the delay finishes,
+                the dash becomes available again, making the movement smooth
+                and responsive.
+              </p>
+              <img src="images/Dash_00.png" alt="Dash Blueprint" class="accordion-image" loading="lazy">
+            </div>
+          </div>
+
+          <!-- ITEM 2 -->
+          <div class="accordion-item open">
+            <button class="accordion-header" type="button" aria-expanded="true">
+              <div class="accordion-left">
+                <i class="bx bx-transfer-alt" aria-hidden="true"></i>
+                <span class="accordion-title">HIGH JUMP AND RECEIVE ATTACK LOGIC</span>
+              </div>
+              <span class="accordion-toggle-icon" aria-hidden="true">+</span>
+            </button>
+
+            <div class="accordion-content">
+              <p>
+                In this setup, I designed two separate functionalities
+                inside my character blueprint. The first section, High Jump,
+                handles the input action that lets the player perform a stronger
+                jump when the condition is met. When the input is pressed, it checks
+                if the player can perform a high jump and sets the “Can High Jump”
+                boolean accordingly, applying additional power for an enhanced jump height.
+                The second section, Receive Attack, focuses on the player’s reaction when
+                hit by an enemy. I created a custom event called Push Back that calculates
+                a directional force using the mesh’s forward and up vectors. These
+                vectors are multiplied and combined to form a launch direction, which
+                is then passed into the Launch Character node to push the player backward
+                realistically, simulating a hit impact. This adds both dynamic response
+                and feedback to the combat system.
+              </p>
+              <img src="images/HJumpandAttackL.png" alt="High Jump and Receive Attack Blueprint" class="accordion-image" loading="lazy">
+            </div>
+          </div>
+
+          <!-- ITEM 3 -->
+          <div class="accordion-item">
+            <button class="accordion-header" type="button" aria-expanded="false">
+              <div class="accordion-left">
+                <i class="bx bx-headphone" aria-hidden="true"></i>
+                <span class="accordion-title">PAUSE GAME</span>
+              </div>
+              <span class="accordion-toggle-icon" aria-hidden="true">+</span>
+            </button>
+
+            <div class="accordion-content">
+              <p>
+                I implemented a simple Pause and Resume system
+                using Blueprints for testing directly inside the editor.
+                Pressing either P or Escape triggers a Flip-Flop node
+                that alternates between two states — pause and resume.
+                In the first state (A), it removes all active widgets
+                and creates the “WBP Pause Game” widget, adding it to
+                the viewport to display the pause menu.
+                In the second state (B), it again removes all widgets
+                and creates the “WBP HUD” widget, bringing the player
+                back to the gameplay interface.
+              </p>
+              <img src="images/PauseGame.png" alt="Pause Game Blueprint" class="accordion-image" loading="lazy">
+            </div>
+          </div>
+
+          <!-- ITEM 4 -->
+          <div class="accordion-item">
+            <button class="accordion-header" type="button" aria-expanded="false">
+              <div class="accordion-left">
+                <i class="bx bx-headphone" aria-hidden="true"></i>
+                <span class="accordion-title">TAKE DAMAGE SYSTEM</span>
+              </div>
+              <span class="accordion-toggle-icon" aria-hidden="true">+</span>
+            </button>
+
+            <div class="accordion-content">
+              <p>
+                I created the Take Damage logic for my player.
+                Whenever the player receives any damage, the
+                Event AnyDamage node subtracts the incoming damage
+                value from the current health. If health becomes
+                less than or equal to zero, it triggers the death
+                sequence — playing a death sound, enabling simulate
+                physics on the mesh, and disabling the player’s
+                movement. After that, the blueprint creates and
+                adds the Game Over Widget to the viewport and
+                switches the input mode to Game and UI so the player
+                can interact with the widget. If the player’s health
+                goes above the maximum limit, it resets it back to
+                the defined MaxHealth value to keep the gameplay
+                balanced.
+              </p>
+              <img src="images/TakeDamageSystem.png" alt="Take Damage Blueprint" class="accordion-image" loading="lazy">
+            </div>
+          </div>
+
+          <!-- ITEM 5 -->
+          <div class="accordion-item">
+            <button class="accordion-header" type="button" aria-expanded="false">
+              <div class="accordion-left">
+                <i class="bx bx-headphone" aria-hidden="true"></i>
+                <span class="accordion-title">FIRE SYSTEM</span>
+              </div>
+              <span class="accordion-toggle-icon" aria-hidden="true">+</span>
+            </button>
+
+            <div class="accordion-content">
+              <p>
+                This setup defines the projectile firing mechanism
+                for the character. When the Left Mouse Button is
+                pressed, it triggers the Spawn Actor node to create
+                a projectile from the character’s Arrow component
+                using its world transform. The projectile is given
+                an initial speed of 2000 and minimal gravity. Once
+                spawned, the system checks for collisions — if the
+                projectile hits an actor with the “Enemy” tag, the
+                Apply Damage node deals 20 points of base damage to
+                that actor. This logic ensures that firing only affects
+                enemies and connects projectile spawning, collision
+                detection, and damage application in one clean sequence.
+              </p>
+              <img src="images/FireSystem.png" alt="Fire System Blueprint" class="accordion-image" loading="lazy">
+            </div>
+          </div>
+
+          <!-- ITEM 6 -->
+          <div class="accordion-item">
+            <button class="accordion-header" type="button" aria-expanded="false">
+              <div class="accordion-left">
+                <i class="bx bx-headphone" aria-hidden="true"></i>
+                <span class="accordion-title">TIMER SYSTEM</span>
+              </div>
+              <span class="accordion-toggle-icon" aria-hidden="true">+</span>
+            </button>
+
+            <div class="accordion-content">
+              <p>
+                I created a simple in-game timer using Blueprints.
+                The system starts with an Event Tick that runs every
+                frame but updates only once per second using a Delay
+                (1.0s) node. Each second, the “Seconds” variable
+                increments, and when it reaches 60, it resets back
+                to 0 while increasing the “Minutes” variable by 1.
+                When the minute count reaches the defined limit, the
+                game triggers a Game Over Widget, adds it to the
+                viewport, and pauses the game. This setup allows for
+                a clear minute-second timer logic that automatically
+                handles the game’s end condition after a specific duration.
+              </p>
+              <img src="images/TimerSystem.png" alt="Timer System Blueprint" class="accordion-image" loading="lazy">
+            </div>
+          </div>
+
+          <!-- ITEM 7 -->
+          <div class="accordion-item">
+            <button class="accordion-header" type="button" aria-expanded="false">
+              <div class="accordion-left">
+                <i class="bx bx-headphone" aria-hidden="true"></i>
+                <span class="accordion-title">CHARACTER SETUP USING STYLIZED DEATH MODEL</span>
+              </div>
+              <span class="accordion-toggle-icon" aria-hidden="true">+</span>
+            </button>
+
+            <div class="accordion-content">
+              <p>
+                I imported a stylized character from Fab that shares
+                the same skeleton as the UE5 mannequin, allowing it to
+                directly use the default Animation Blueprint without
+                any retargeting. I assigned the ABP_Manny animation
+                class to my character and slightly adjusted the transform
+                and scale values to fit the Side Scroller setup. Due to
+                the character’s smaller height, it appears to float
+                slightly above the ground while walking, which visually
+                gives a cool hovering effect that fits well with its
+                overall style.
+              </p>
+              <img src="images/CharSetup_00.png" alt="Character Setup Blueprint 1" class="accordion-image" loading="lazy">
+              <img src="images/CharSetup_01.png" alt="Character Setup Blueprint 2" class="accordion-image" loading="lazy">
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- Back to main page -->
+      <a class="back-link backfx" href="index.html#projects" aria-label="RETURN TO THE GAME VAULT">
+        <span class="backfx-arrow" aria-hidden="true">←</span>
+        <span class="backfx-text" data-text="RETURN TO THE GAME VAULT">RETURN TO THE GAME VAULT</span>
+        <span class="backfx-caret" aria-hidden="true"></span>
+      </a>
+
+    </main>
+  </div>
+
+  <!-- SCRIPTS -->
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+
+      // Loader fade-out (hides loading screen)
+      window.addEventListener("load", () => {
+        const loader = document.getElementById("loader");
+        if (loader) loader.classList.add("fade-out");
+        document.body.classList.add("page-ready");
+      }, { once: true });
+
+      // Accordion helpers
+      function setOpen(item, open) {
+        const content = item.querySelector(".accordion-content");
+        const btn = item.querySelector(".accordion-header");
+
+        if (!content || !btn) return;
+
+        item.classList.toggle("open", open);
+        btn.setAttribute("aria-expanded", open ? "true" : "false");
+
+        if (open) {
+          // Ensure correct height after images load too
+          requestAnimationFrame(() => {
+            content.style.maxHeight = content.scrollHeight + "px";
+          });
+        } else {
+          content.style.maxHeight = "0px";
+        }
+      }
+
+      // Accordion click wiring
+      document.querySelectorAll(".accordion-header").forEach((header) => {
+        header.addEventListener("click", () => {
+          const item = header.closest(".accordion-item");
+          if (!item) return;
+
+          const isOpen = item.classList.contains("open");
+
+          // Close other open items
+          document.querySelectorAll(".accordion-item.open").forEach((openItem) => {
+            if (openItem !== item) setOpen(openItem, false);
+          });
+
+          // Toggle current
+          setOpen(item, !isOpen);
+        });
+      });
+
+      // Initialize open accordions height + aria
+      document.querySelectorAll(".accordion-item").forEach((item) => {
+        setOpen(item, item.classList.contains("open"));
+      });
+
+      // If images inside accordion load later, re-measure open panel height
+      document.querySelectorAll(".accordion-item .accordion-image").forEach((img) => {
+        img.addEventListener("load", () => {
+          const item = img.closest(".accordion-item");
+          if (item && item.classList.contains("open")) setOpen(item, true);
+        }, { once: true });
+      });
+
+      // ============================
+      // Back-to-Games Auto Typewriter FX (Premium Loop)
+      // ============================
+      const backFX = document.querySelector(".back-link.backfx");
+      if (backFX) {
+        const textEl = backFX.querySelector(".backfx-text");
+        const original = textEl?.dataset.text || textEl?.textContent || "Back to Games";
+
+        let timer = null;
+
+        // Premium timings (slow + intentional)
+        const BASE_TYPE_MS = 150;     // main typing speed
+        const RANDOM_JITTER = 80;     // human variation
+        const FULL_HOLD_MS = 1800;    // pause after full text
+        const RESTART_DELAY_MS = 900; // pause before restarting
+
+        function clearTimers() {
+          if (timer) clearTimeout(timer);
+          timer = null;
+        }
+
+        function startLoop() {
+          if (!textEl) return;
+
+          backFX.classList.add("is-typing");
+
+          let i = 0;
+          textEl.textContent = "";
+
+          const typeNext = () => {
+            i++;
+            textEl.textContent = original.slice(0, i);
+
+            if (i >= original.length) {
+              timer = setTimeout(() => {
+                textEl.textContent = "";
+                i = 0;
+                timer = setTimeout(typeNext, RESTART_DELAY_MS);
+              }, FULL_HOLD_MS);
+              return;
+            }
+
+            const ch = original[i - 1];
+            const extra =
+              (ch === " " ? 80 : 0) +
+              (",.;:!?)".includes(ch) ? 160 : 0);
+
+            const delay = BASE_TYPE_MS + Math.floor(Math.random() * RANDOM_JITTER) + extra;
+            timer = setTimeout(typeNext, delay);
+          };
+
+          typeNext();
+        }
+
+        startLoop();
+
+        document.addEventListener("visibilitychange", () => {
+          clearTimers();
+          if (!document.hidden) startLoop();
+        });
+      }
+
+    });
+  </script>
+
+<script>
+  (function () {
+    const btn = document.querySelector(".nav-toggle");
+    const links = document.querySelector(".nav-links");
+    const overlay = document.querySelector(".nav-overlay");
+
+    if (!btn || !links || !overlay) return;
+
+    function openMenu() {
+      document.body.classList.add("nav-open");
+      btn.setAttribute("aria-expanded", "true");
+      btn.setAttribute("aria-label", "Close menu");
+      overlay.hidden = false;
+    }
+
+    function closeMenu() {
+      document.body.classList.remove("nav-open");
+      btn.setAttribute("aria-expanded", "false");
+      btn.setAttribute("aria-label", "Open menu");
+      overlay.hidden = true;
+    }
+
+    btn.addEventListener("click", () => {
+      document.body.classList.contains("nav-open") ? closeMenu() : openMenu();
+    });
+
+    overlay.addEventListener("click", closeMenu);
+
+    // Close when clicking a link (mobile)
+    links.querySelectorAll("a").forEach(a => a.addEventListener("click", closeMenu));
+
+    // Close on Escape
+    window.addEventListener("keydown", (e) => {
+      if (e.key === "Escape") closeMenu();
+    });
+
+    // If resized to desktop, ensure menu is reset
+    window.addEventListener("resize", () => {
+      if (window.innerWidth > 860) closeMenu();
+    });
+  })();
+</script>
+  <noscript>
+    <style>
+      #loader { display: none !important; }
+    </style>
+  </noscript>
+
+
+<!-- shared 3D / scroll / interaction engine -->
+<script src="systems.js" defer></script>
+</body>
+</html>
