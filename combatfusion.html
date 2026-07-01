@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Combat Fusion – Mahanthi Kannapalli</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://api.fontshare.com" crossorigin>
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<div id="loader">
+    <div class="star-core"></div>
+
+    <!-- Shockwaves -->
+    <div class="star-wave wave-1"></div>
+    <div class="star-wave wave-2"></div>
+
+    <!-- Many particles -->
+    <div class="star-particles">
+        <span></span><span></span><span></span><span></span><span></span>
+        <span></span><span></span><span></span><span></span><span></span>
+        <span></span><span></span><span></span><span></span><span></span>
+        <span></span><span></span><span></span><span></span><span></span>
+    </div>
+</div>
+
+<body class="project-page" style="--project-bg: url('images/combat-fusion.png');">
+  <!-- 🔹 special class ONLY on project pages -->
+
+<!-- NAVBAR -->
+<nav class="navbar" aria-label="Primary">
+    <a href="index.html" class="logo brandmark" aria-label="Mahanthi Kannapalli — home"><span class="logo-badge" aria-hidden="true"><span class="logo-bracket">[</span><span class="logo-mono">MK</span><span class="logo-bracket">]</span></span><span class="logo-word"><span class="logo-first">MAHANTHI</span><span class="logo-last">KANNAPALLI</span></span></a>
+
+    <!-- Mobile toggle (only shows on small screens) -->
+    <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false">
+        <span class="nav-toggle-icon" aria-hidden="true">
+            <span></span><span></span><span></span>
+        </span>
+    </button>
+
+    <ul class="nav-links">
+    <li>
+        <a href="index.html#about">
+            <i class="bx bx-user"></i>
+            <span>About</span>
+        </a>
+    </li>
+
+    <li>
+        <a href="index.html#projects">
+            <i class="bx bx-briefcase-alt-2"></i>
+            <span>Projects</span>
+        </a>
+    </li>
+
+    <li>
+        <a href="index.html#systems">
+            <i class="bx bx-network-chart"></i>
+            <span>Systems</span>
+        </a>
+    </li>
+
+    <li>
+        <a href="index.html#contact">
+            <i class="bx bx-envelope"></i>
+            <span>Contact</span>
+        </a>
+    </li>
+    </ul>
+</nav>
+
+<!-- Mobile overlay (click to close) -->
+<div class="nav-overlay" hidden></div>
+  
+  <div class="project-glass">
+<!-- FIXED BACKGROUND HERO JUST FOR THIS PAGE -->
+<header class="project-hero">
+    <div class="project-hero-overlay">
+        <span class="sys-eyebrow center"><span class="dot"></span> // GAME_MODULE · COMBAT_SYSTEMS</span>
+        <h1>Combat Fusion</h1>
+        <p>Combat Fusion – Unreal Engine 5</p>
+
+        <div class="project-hero-tags">
+            <span>Unreal 5</span>
+            <span>Blueprints</span>
+            <span>Hand Combat</span>
+        </div>
+    </div>
+</header>
+
+<main class="project-content">
+
+        <!-- 🎥 GAMEPLAY VIDEO SECTION -->
+        <section class="project-video-section">
+            <h2 class="section-title">GAMEPLAY VIDEO</h2>
+                <iframe
+                  src="https://www.youtube.com/embed/gTxc9A_458g"
+                  title="Combat Fusion – Gameplay"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowfullscreen
+                ></iframe>
+        </section>
+
+    <!-- 🔽 DROPDOWN TABS / ACCORDION SECTION -->
+        <section class="project-accordion-section">
+            <h2 class="section-title">SYSTEMS & RESPONSIBILITIES</h2>
+
+            <div class="accordion">
+
+                <!-- ITEM 1 -->
+                <div class="accordion-item open">
+                    <button class="accordion-header">
+                        <div class="accordion-left">
+                            <i class="bx bx-transfer-alt"></i>
+                            <span class="accordion-title">
+                                CHARACTER SETUP
+                            </span>
+                        </div>
+                        <span class="accordion-toggle-icon">+</span>
+                    </button>
+                    <div class="accordion-content">
+                        <p>
+                            Implementation of the player’s animation system in Unreal Engine — 
+                            combining locomotion, jumping, ledge climbing, and attack states through 
+                            layered state machines, blend poses, and animation notifies to manage 
+                            seamless transitions and combat logic.
+                        </p>
+                        <!-- Example image (optional) -->
+                        <img src="images/CharSetup_00.png" alt="FSM Blueprint" class="accordion-image">
+                        <img src="images/CharSetup_01.png" alt="FSM Blueprint" class="accordion-image">
+                        <img src="images/CharSetup_02.png" alt="FSM Blueprint" class="accordion-image">
+                        <img src="images/CharSetup_03.png" alt="FSM Blueprint" class="accordion-image">
+                    </div>
+                </div>
+
+                 <!-- ITEM 2 -->
+                <div class="accordion-item">
+                    <button class="accordion-header">
+                        <div class="accordion-left">
+                            <i class="bx bx-transfer-alt"></i>
+                            <span class="accordion-title">
+                                TWO-PHASE ROTATING GATE
+                            </span>
+                        </div>
+                        <span class="accordion-toggle-icon">+</span>
+                    </button>
+                    <div class="accordion-content">
+                        <p>
+                            This Blueprint setup enables a gate to rotate clockwise on the 
+                            first press and anticlockwise on the second press of the ‘R’ key. 
+                            It uses a FlipFlop node to alternate the rotation direction, a 
+                            Timeline to control smooth rotation, and Disable/Enable Input nodes 
+                            with a short delay to prevent repeated triggers during rotation.
+                        </p>
+                        <!-- Example image (optional) -->
+                        <img src="images/2-PRotGate.png" alt="FSM Blueprint" class="accordion-image">
+                    </div>
+                </div>
+
+                <!-- ITEM 3 -->
+                <div class="accordion-item">
+                    <button class="accordion-header">
+                        <div class="accordion-left">
+                            <i class="bx bx-transfer-alt"></i>
+                            <span class="accordion-title">
+                                LEVEL BLOCKOUTS
+                            </span>
+                        </div>
+                        <span class="accordion-toggle-icon">+</span>
+                    </button>
+                    <div class="accordion-content">
+                        <!-- <p>
+                            This part computes two core parameters:
+                            WiHi: The total weighted impact of all successful hits.
+                            PjMj: The accumulated penalty for missed or failed attacks.
+                            Both are processed with time-based decay and stored for the final calculation, ensuring the player’s consistency and precision directly affect the attack rate.
+                        </p> -->
+                        <!-- Example image (optional) -->
+                        <img src="images/LBlockout_00.png" alt="FSM Blueprint" class="accordion-image">
+                        <img src="images/LBlockout_01.png" alt="FSM Blueprint" class="accordion-image">
+                        <img src="images/LBlockout_02.png" alt="FSM Blueprint" class="accordion-image">
+                        <img src="images/LBlockout_03.png" alt="FSM Blueprint" class="accordion-image">
+                    </div>
+                </div>
+
+                 <!-- ITEM 4 -->
+                <div class="accordion-item">
+                    <button class="accordion-header">
+                        <div class="accordion-left">
+                            <i class="bx bx-transfer-alt"></i>
+                            <span class="accordion-title">
+                                PLAYER ABILITIES
+                            </span>
+                        </div>
+                        <span class="accordion-toggle-icon">+</span>
+                    </button>
+                    <div class="accordion-content">
+                        <!--<p>
+                            This section handles temporal and gameplay gap adjustments. 
+                            The summation of T accounts for the average attack timing intervals, 
+                            while G integrates global gameplay modifiers such as overall combo flow or gap duration. 
+                            These values stabilize the formula to maintain fairness and responsiveness.
+                        </p> -->
+                        <!-- Example image (optional) -->
+                        <img src="images/PAbilities_00.png" alt="FSM Blueprint" class="accordion-image">
+                        <img src="images/PAbilities_01.png" alt="FSM Blueprint" class="accordion-image">
+                        <img src="images/PAbilities_02.png" alt="FSM Blueprint" class="accordion-image">
+                        <img src="images/PAbilities_03.png" alt="FSM Blueprint" class="accordion-image">
+                        <img src="images/PAbilities_04.png" alt="FSM Blueprint" class="accordion-image">
+                        <img src="images/PAbilities_05.png" alt="FSM Blueprint" class="accordion-image">
+                        <img src="images/PAbilities_06.png" alt="FSM Blueprint" class="accordion-image">
+                    </div>
+                </div>
+
+                <!-- ITEM 5 -->
+                <div class="accordion-item">
+                    <button class="accordion-header">
+                        <div class="accordion-left">
+                            <i class="bx bx-transfer-alt"></i>
+                            <span class="accordion-title">
+                                LEDGE CLIMBING
+                            </span>
+                        </div>
+                        <span class="accordion-toggle-icon">+</span>
+                    </button>
+                    <div class="accordion-content">
+                        <p>
+                           I implemented the ledge detection and movement system for the player. 
+                            The first blueprint setup handles the ledge movement mechanics, 
+                            allowing the character to move left and right along the ledge while 
+                            maintaining smooth transitions and correct positioning. Each direction 
+                            has its own logic flow that updates the player’s location and rotation 
+                            using interpolation for natural movement.
+                           I used multiple capsule and line traces to detect ledges in front 
+                            of the player and determine the exact height and position of the ledge. 
+                            Once detected, the system sets the proper ledge height location and 
+                            aligns the character’s hands and body to match the ledge surface using 
+                            Fix Char Location and Fix Char Rotation functions. This ensures the character 
+                            correctly snaps to the ledge and interacts with it realistically during gameplay.
+                        </p>
+                        <!-- Example image (optional) -->
+                        <img src="images/LClimb_02.png" alt="FSM Blueprint" class="accordion-image">
+                        <img src="images/LClimb_00.png" alt="FSM Blueprint" class="accordion-image">
+                        <img src="images/LClimb_01.png" alt="FSM Blueprint" class="accordion-image">
+                    </div>
+                </div>
+
+                <!-- ITEM 6 -->
+                <div class="accordion-item">
+                    <button class="accordion-header">
+                        <div class="accordion-left">
+                            <i class="bx bx-transfer-alt"></i>
+                            <span class="accordion-title">
+                                TELEPORT ABILITY SYSTEM
+                            </span>
+                        </div>
+                        <span class="accordion-toggle-icon">+</span>
+                    </button>
+                    <div class="accordion-content">
+                        <p>
+                           I created a teleport system for the player using Blueprints. 
+                            When I press the right mouse button, a line trace checks for a 
+                            valid location in front of the player. If it hits a surface, the 
+                            player teleports to that point. Before teleporting, I made the mesh 
+                            invisible and spawned visual effects (Gideon and Meteor effects) 
+                            to enhance the teleport animation. The teleport movement is smoothly 
+                            handled using the Move Component To node. Once the teleport ends, 
+                            I made the mesh visible again, added a short delay, and destroyed the 
+                            spawned effects to clean up the scene. The system is fully controlled 
+                            with boolean checks to avoid repeated teleporting during execution.
+                        </p>
+                        <!-- Example image (optional) -->
+                        <img src="images/TAbility_00.png" alt="FSM Blueprint" class="accordion-image">
+                        <img src="images/TAbility_01.png" alt="FSM Blueprint" class="accordion-image">
+                        <img src="images/TAbility_02.png" alt="FSM Blueprint" class="accordion-image">
+                        <img src="images/TAbility_03.png" alt="FSM Blueprint" class="accordion-image">
+                    </div>
+                </div>
+
+                 <!-- ITEM 7 -->
+                <div class="accordion-item">
+                    <button class="accordion-header">
+                        <div class="accordion-left">
+                            <i class="bx bx-transfer-alt"></i>
+                            <span class="accordion-title">
+                                DOUBLE JUMP
+                            </span>
+                        </div>
+                        <span class="accordion-toggle-icon">+</span>
+                    </button>
+                    <div class="accordion-content">
+                        <p>
+                           In this setup, I created a Jump and Bounce Jump system that handles 
+                            both normal and enhanced jumps. When the jump input is triggered, 
+                            it first checks if the player is attached to a ledge and detaches 
+                            if needed. Then, the player performs a jump, and a short delay 
+                            increases the Jump Count. When the player reaches the bounce jump 
+                            condition, a jump montage plays to visually enhance the motion before 
+                            applying the launch force. Using the Launch Character node adds extra 
+                            upward velocity, creating a smooth bounce effect. Finally, when the 
+                            player lands, the Jump Count resets to maintain consistent jump control.
+                        </p>
+                        <!-- Example image (optional) -->
+                        <img src="images/DJump_00.png" alt="FSM Blueprint" class="accordion-image">
+                        <img src="images/DJump_01.png" alt="FSM Blueprint" class="accordion-image">
+                        <img src="images/DJump_02.png" alt="FSM Blueprint" class="accordion-image">
+                        <img src="images/DJump_03.png" alt="FSM Blueprint" class="accordion-image">
+                    </div>
+                </div>
+
+                 <!-- ITEM 8 -->
+                <div class="accordion-item">
+                    <button class="accordion-header">
+                        <div class="accordion-left">
+                            <i class="bx bx-transfer-alt"></i>
+                            <span class="accordion-title">
+                                PROJECTILE ATTACK
+                            </span>
+                        </div>
+                        <span class="accordion-toggle-icon">+</span>
+                    </button>
+                    <div class="accordion-content">
+                        <p>
+                           I created the Projectile Attack system for the player character. 
+                            When the attack input is triggered, it checks if the projectile ability 
+                            is active and then spawns a projectile in the direction the camera is facing. 
+                            I used a Line Trace by Channel to get the hit location and calculate the 
+                            direction from the player’s weapon to the target point. The projectile is 
+                            spawned using a Transform location and rotation derived from the trace result 
+                            to ensure accurate aiming. When the projectile hits an actor, it applies 
+                            damage using the Apply Damage node, plays the impact effect, and triggers 
+                            a hit reaction on the target. This setup makes the attack feel responsive 
+                            and accurate, with proper collision and damage feedback on impact.
+                        </p>
+                        <!-- Example image (optional) -->
+                        <img src="images/PAttack_00.png" alt="FSM Blueprint" class="accordion-image">
+                        <img src="images/PAttack_01.png" alt="FSM Blueprint" class="accordion-image">
+                    </div>
+                </div>
+
+                <!-- ITEM 9 -->
+                <div class="accordion-item">
+                    <button class="accordion-header">
+                        <div class="accordion-left">
+                            <i class="bx bx-transfer-alt"></i>
+                            <span class="accordion-title">
+                                BASE BEHAVIOR TREE SETUP
+                            </span>
+                        </div>
+                        <span class="accordion-toggle-icon">+</span>
+                    </button>
+                    <div class="accordion-content">
+                        <p>
+                           This is my base behavior tree which defines the core AI logic 
+                            shared by all enemy types. It uses blackboard-based conditions to 
+                            switch between Frozen, Combat, Investigating, and Patrol (Passive) states. 
+                            Each state runs its own subtree, allowing enemies to behave dynamically 
+                            depending on their current state.
+                        </p>
+                        <!-- Example image (optional) -->
+                        <img src="images/BaseBT.png" alt="FSM Blueprint" class="accordion-image">
+                    </div>
+                </div>
+
+                <!-- ITEM 10 -->
+                <div class="accordion-item">
+                    <button class="accordion-header">
+                        <div class="accordion-left">
+                            <i class="bx bx-transfer-alt"></i>
+                            <span class="accordion-title">
+                                MELEE ENEMY BEHAVIOR TREE
+                            </span>
+                        </div>
+                        <span class="accordion-toggle-icon">+</span>
+                    </button>
+                    <div class="accordion-content">
+                        <p>
+                           The melee enemy’s behavior tree is also derived from the base tree but 
+                            focuses on close-range combat. In its Attack State, the enemy can equip 
+                            or unequip its sword, block player attacks, and strafe around the player 
+                            before attacking. It uses EQS for movement decisions and ensures the sword 
+                            is unsheathed only during active combat, giving a more realistic melee behavior.
+                        </p>
+                        <!-- Example image (optional) -->
+                        <img src="images/MeleeEnemyBT.png" alt="FSM Blueprint" class="accordion-image">
+                    </div>
+                </div>
+
+                <!-- ITEM 11 -->
+                <div class="accordion-item">
+                    <button class="accordion-header">
+                        <div class="accordion-left">
+                            <i class="bx bx-transfer-alt"></i>
+                            <span class="accordion-title">
+                                RANGED ENEMY BEHAVOIR TREE
+                            </span>
+                        </div>
+                        <span class="accordion-toggle-icon">+</span>
+                    </button>
+                    <div class="accordion-content">
+                        <p>
+                           For the ranged enemy, I duplicated the base behavior tree and added more complex logic. 
+                            In the Attack State, the enemy uses a rifle to attack, can block player attacks, 
+                            and will run and hide to heal when its health is low. After healing, it returns 
+                            to combat. The system also includes movement to line of sight, strafing around 
+                            the player, and dynamic positioning using EQS queries for smarter cover and attack points.
+                        </p>
+                        <!-- Example image (optional) -->
+                        <img src="images/RangedEnemyBT.png" alt="FSM Blueprint" class="accordion-image">
+                    </div>
+                </div>
+
+
+<!-- Back to main page -->
+<a class="back-link backfx" href="index.html#projects" aria-label="RETURN TO THE GAME VAULT">
+  <span class="backfx-arrow" aria-hidden="true">←</span>
+  <span class="backfx-text" data-text="RETURN TO THE GAME VAULT">RETURN TO THE GAME VAULT</span>
+  <span class="backfx-caret" aria-hidden="true"></span>
+</a>
+
+</main>
+</div> <!-- /project-glass -->
+
+<!-- ================== SCRIPTS ================== -->
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+    // Loader fade-out (THIS is what hides the loading screen)
+    window.addEventListener("load", () => {
+        document.getElementById("loader")?.classList.add("fade-out");
+        document.body.classList.add("page-ready");
+    });
+
+    // Accordion
+    document.querySelectorAll(".accordion-header").forEach(header => {
+        header.addEventListener("click", () => {
+            const item = header.parentElement;
+            const content = item.querySelector(".accordion-content");
+            const isOpen = item.classList.contains("open");
+
+            document.querySelectorAll(".accordion-item.open").forEach(openItem => {
+                if (openItem !== item) {
+                    openItem.classList.remove("open");
+                    openItem.querySelector(".accordion-content").style.maxHeight = 0;
+                }
+            });
+
+            if (!isOpen) {
+                item.classList.add("open");
+                content.style.maxHeight = content.scrollHeight + "px";
+            } else {
+                item.classList.remove("open");
+                content.style.maxHeight = 0;
+            }
+        });
+    });
+
+    // Keep already-open accordions sized correctly
+    document.querySelectorAll(".accordion-item.open .accordion-content")
+        .forEach(c => c.style.maxHeight = c.scrollHeight + "px");
+
+    // ============================
+    // Back-to-Games Auto Typewriter FX (Premium Loop)
+    // ============================
+    const backFX = document.querySelector(".back-link.backfx");
+    if (backFX) {
+        const textEl = backFX.querySelector(".backfx-text");
+        const original = textEl?.dataset.text || textEl?.textContent || "Back to Games";
+
+        let timer = null;
+
+        // Premium timings (slow + intentional)
+        const BASE_TYPE_MS = 150;     // main typing speed
+        const RANDOM_JITTER = 80;     // human variation
+        const FULL_HOLD_MS = 1800;    // pause after full text
+        const RESTART_DELAY_MS = 900; // pause before restarting
+
+        function clearTimers() {
+            clearTimeout(timer);
+            timer = null;
+        }
+
+        function startLoop() {
+            if (!textEl) return;
+
+            backFX.classList.add("is-typing");
+
+            let i = 0;
+            textEl.textContent = "";
+
+            const typeNext = () => {
+                i++;
+                textEl.textContent = original.slice(0, i);
+
+                if (i >= original.length) {
+                    timer = setTimeout(() => {
+                        textEl.textContent = "";
+                        i = 0;
+                        timer = setTimeout(typeNext, RESTART_DELAY_MS);
+                    }, FULL_HOLD_MS);
+                    return;
+                }
+
+                const ch = original[i - 1];
+                const extra =
+                    (ch === " " ? 80 : 0) +
+                    (",.;:!?)".includes(ch) ? 160 : 0);
+
+                const delay = BASE_TYPE_MS + Math.floor(Math.random() * RANDOM_JITTER) + extra;
+                timer = setTimeout(typeNext, delay);
+            };
+
+            typeNext();
+        }
+
+        startLoop();
+
+        document.addEventListener("visibilitychange", () => {
+            clearTimers();
+            if (!document.hidden) startLoop();
+        });
+    }
+
+});
+</script>
+
+<script>
+  (function () {
+    const btn = document.querySelector(".nav-toggle");
+    const links = document.querySelector(".nav-links");
+    const overlay = document.querySelector(".nav-overlay");
+
+    if (!btn || !links || !overlay) return;
+
+    function openMenu() {
+      document.body.classList.add("nav-open");
+      btn.setAttribute("aria-expanded", "true");
+      btn.setAttribute("aria-label", "Close menu");
+      overlay.hidden = false;
+    }
+
+    function closeMenu() {
+      document.body.classList.remove("nav-open");
+      btn.setAttribute("aria-expanded", "false");
+      btn.setAttribute("aria-label", "Open menu");
+      overlay.hidden = true;
+    }
+
+    btn.addEventListener("click", () => {
+      document.body.classList.contains("nav-open") ? closeMenu() : openMenu();
+    });
+
+    overlay.addEventListener("click", closeMenu);
+
+    // Close when clicking a link (mobile)
+    links.querySelectorAll("a").forEach(a => a.addEventListener("click", closeMenu));
+
+    // Close on Escape
+    window.addEventListener("keydown", (e) => {
+      if (e.key === "Escape") closeMenu();
+    });
+
+    // If resized to desktop, ensure menu is reset
+    window.addEventListener("resize", () => {
+      if (window.innerWidth > 860) closeMenu();
+    });
+  })();
+</script>
+
+<!-- shared 3D / scroll / interaction engine -->
+<script src="systems.js" defer></script>
+</body>
+</html>
