@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Camera Visibility Scoring – Mahanthi Kannapalli</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="preconnect" href="https://api.fontshare.com" crossorigin>
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="project-page" style="--project-bg: url('images/camera-system-bg.png');" data-loader="evaluation">
+
+<!-- LOADER (EXACT Private Room) -->
+<div id="loader">
+    <div class="star-core"></div>
+    <div class="star-wave wave-1"></div>
+    <div class="star-wave wave-2"></div>
+    <div class="star-particles">
+        <span></span><span></span><span></span><span></span><span></span>
+    </div>
+</div>
+
+<!-- NAVBAR -->
+<nav class="navbar" aria-label="Primary">
+    <a href="index.html" class="logo brandmark" aria-label="Mahanthi Kannapalli — home"><span class="logo-badge" aria-hidden="true"><span class="logo-bracket">[</span><span class="logo-mono">MK</span><span class="logo-bracket">]</span></span><span class="logo-word"><span class="logo-first">MAHANTHI</span><span class="logo-last">KANNAPALLI</span></span></a>
+
+    <!-- Mobile toggle (only shows on small screens) -->
+    <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false">
+        <span class="nav-toggle-icon" aria-hidden="true">
+            <span></span><span></span><span></span>
+        </span>
+    </button>
+
+    <ul class="nav-links">
+    <li>
+        <a href="index.html#about">
+            <i class="bx bx-user"></i>
+            <span>About</span>
+        </a>
+    </li>
+
+    <li>
+        <a href="index.html#projects">
+            <i class="bx bx-briefcase-alt-2"></i>
+            <span>Projects</span>
+        </a>
+    </li>
+
+    <li>
+        <a href="index.html#systems">
+            <i class="bx bx-network-chart"></i>
+            <span>Systems</span>
+        </a>
+    </li>
+
+    <li>
+        <a href="index.html#contact">
+            <i class="bx bx-envelope"></i>
+            <span>Contact</span>
+        </a>
+    </li>
+    </ul>
+</nav>
+
+<!-- Mobile overlay (click to close) -->
+<div class="nav-overlay" hidden></div>
+
+<!-- GLASS WRAPPER -->
+<div class="project-glass">
+
+<!-- HERO -->
+<header class="project-hero">
+    <div class="project-hero-overlay">
+        <span class="sys-eyebrow center"><span class="dot"></span> // SYSTEM_MODULE · EVALUATION</span>
+        <h1>Camera Visibility Scoring</h1>
+        <p>Camera Capture + Evaluation System that Scores Photos by Target Visibility</p>
+
+        <div class="project-hero-tags">
+            <span>Camera Systems</span>
+            <span>Visibility Scoring</span>
+            <span>Gameplay Evaluation</span>
+        </div>
+    </div>
+</header>
+
+<!-- CONTENT -->
+<main class="project-content">
+
+        <!-- 🎥 GAMEPLAY VIDEO SECTION -->
+        <section class="project-video-section">
+    <h2 class="section-title">Developer Walk-through</h2>
+        <iframe
+            src="https://www.youtube.com/embed/O3DTw91pJzc"
+            title="Camera Visibility Scoring - Developer Walk-through"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen
+        ></iframe>
+        </section>
+
+<!-- ACCORDION -->
+<section class="project-accordion-section">
+    <h2 class="section-title">SYSTEMS & RESPONSIBILITIES</h2>
+
+    <div class="accordion">
+
+        <!-- OVERVIEW -->
+        <div class="accordion-item open">
+            <button class="accordion-header">
+                <div class="accordion-left">
+                    <i class="bx bx-camera"></i>
+                    <span class="accordion-title">OVERVIEW</span>
+                </div>
+                <span class="accordion-toggle-icon">+</span>
+            </button>
+
+            <div class="accordion-content">
+                <p>
+                    This system captures an image using an in-game camera and generates a score that represents how well
+                    the target toy appears in the frame. The score can be used for gameplay rewards, photo missions,
+                    or objective “photo quality” evaluation.
+                </p>
+            </div>
+        </div>
+
+        <!-- SCORING GOAL -->
+        <div class="accordion-item">
+            <button class="accordion-header">
+                <div class="accordion-left">
+                    <i class="bx bx-bullseye"></i>
+                    <span class="accordion-title">SCORING GOAL</span>
+                </div>
+                <span class="accordion-toggle-icon">+</span>
+            </button>
+
+            <div class="accordion-content">
+                <p>
+                    The score increases when more of the toy is clearly visible in the camera output, and decreases when the
+                    toy is partially visible, out of frame, or occluded by obstacles. This encourages better composition and
+                    positioning instead of “spam capture.”
+                </p>
+            </div>
+        </div>
+
+        <!-- KEY COMPONENTS -->
+        <div class="accordion-item">
+            <button class="accordion-header">
+                <div class="accordion-left">
+                    <i class="bx bx-grid-alt"></i>
+                    <span class="accordion-title">KEY COMPONENTS</span>
+                </div>
+                <span class="accordion-toggle-icon">+</span>
+            </button>
+
+            <div class="accordion-content">
+                <p>
+                    Typical building blocks include: camera capture, target identification, visibility/coverage estimation,
+                    occlusion handling, and a final scoring function that maps visibility to points.
+                </p>
+            </div>
+        </div>
+
+        <!-- USE CASES -->
+        <div class="accordion-item">
+            <button class="accordion-header">
+                <div class="accordion-left">
+                    <i class="bx bx-wrench"></i>
+                    <span class="accordion-title">USE CASES</span>
+                </div>
+                <span class="accordion-toggle-icon">+</span>
+            </button>
+
+            <div class="accordion-content">
+                <p>
+                    Photo-mode challenges, “capture the target” quests, wildlife photography scoring, stealth camera gadgets,
+                    or any mechanic where camera framing and clear visibility should be rewarded.
+                </p>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- BACK LINK (EXACT Private Room placement/style) -->
+<a class="back-link backfx" href="index.html#systems" aria-label="RETURN TO THE SYSTEM VAULT">
+    <span class="backfx-arrow">←</span>
+    <span class="backfx-text" data-text="RETURN TO THE SYSTEM VAULT">
+        RETURN TO THE SYSTEM VAULT
+    </span>
+    <span class="backfx-caret"></span>
+</a>
+
+</main>
+</div>
+
+<!-- SCRIPTS (EXACT Private Room behavior) -->
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+    // Loader
+    window.addEventListener("load", () => {
+        document.getElementById("loader")?.classList.add("fade-out");
+        document.body.classList.add("page-ready");
+    });
+
+    // Accordion – single open, smooth height
+    document.querySelectorAll(".accordion-header").forEach(header => {
+        header.addEventListener("click", () => {
+            const item = header.parentElement;
+            const content = item.querySelector(".accordion-content");
+            const isOpen = item.classList.contains("open");
+
+            document.querySelectorAll(".accordion-item.open").forEach(openItem => {
+                if (openItem !== item) {
+                    openItem.classList.remove("open");
+                    openItem.querySelector(".accordion-content").style.maxHeight = 0;
+                }
+            });
+
+            if (!isOpen) {
+                item.classList.add("open");
+                content.style.maxHeight = content.scrollHeight + "px";
+            } else {
+                item.classList.remove("open");
+                content.style.maxHeight = 0;
+            }
+        });
+    });
+
+    document.querySelectorAll(".accordion-item.open .accordion-content")
+        .forEach(c => c.style.maxHeight = c.scrollHeight + "px");
+
+    // Back-link typing loop (same feel as Private Room)
+    const backFX = document.querySelector(".back-link.backfx");
+    if (backFX) {
+        const textEl = backFX.querySelector(".backfx-text");
+        const original = textEl.dataset.text;
+
+        let timer;
+
+        function loop() {
+            let i = 0;
+            textEl.textContent = "";
+
+            const type = () => {
+                if (i <= original.length) {
+                    textEl.textContent = original.slice(0, i++);
+                    timer = setTimeout(type, 140 + Math.random() * 80);
+                } else {
+                    timer = setTimeout(loop, 2000);
+                }
+            };
+            type();
+        }
+        loop();
+    }
+
+});
+</script>
+
+<script>
+  (function () {
+    const btn = document.querySelector(".nav-toggle");
+    const links = document.querySelector(".nav-links");
+    const overlay = document.querySelector(".nav-overlay");
+
+    if (!btn || !links || !overlay) return;
+
+    function openMenu() {
+      document.body.classList.add("nav-open");
+      btn.setAttribute("aria-expanded", "true");
+      btn.setAttribute("aria-label", "Close menu");
+      overlay.hidden = false;
+    }
+
+    function closeMenu() {
+      document.body.classList.remove("nav-open");
+      btn.setAttribute("aria-expanded", "false");
+      btn.setAttribute("aria-label", "Open menu");
+      overlay.hidden = true;
+    }
+
+    btn.addEventListener("click", () => {
+      document.body.classList.contains("nav-open") ? closeMenu() : openMenu();
+    });
+
+    overlay.addEventListener("click", closeMenu);
+
+    // Close when clicking a link (mobile)
+    links.querySelectorAll("a").forEach(a => a.addEventListener("click", closeMenu));
+
+    // Close on Escape
+    window.addEventListener("keydown", (e) => {
+      if (e.key === "Escape") closeMenu();
+    });
+
+    // If resized to desktop, ensure menu is reset
+    window.addEventListener("resize", () => {
+      if (window.innerWidth > 860) closeMenu();
+    });
+  })();
+</script>
+
+<!-- shared 3D / scroll / interaction engine -->
+<script src="systems.js" defer></script>
+</body>
+</html>

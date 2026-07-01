@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mahanthi Kannapalli — Gameplay Programmer & Technical Systems Designer</title>
+
+    <link rel="preconnect" href="https://api.fontshare.com" crossorigin>
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body data-loader="home">
+
+<!-- ⭐ FULL SCREEN STAR EXPLOSION LOADER -->
+<div id="loader">
+    <div class="star-core"></div>
+
+    <!-- Shockwaves -->
+    <div class="star-wave wave-1"></div>
+    <div class="star-wave wave-2"></div>
+
+    <!-- Many particles -->
+    <div class="star-particles">
+        <span></span><span></span><span></span><span></span><span></span>
+        <span></span><span></span><span></span><span></span><span></span>
+        <span></span><span></span><span></span><span></span><span></span>
+        <span></span><span></span><span></span><span></span><span></span>
+    </div>
+</div>
+
+<!-- NAVBAR -->
+<nav class="navbar" aria-label="Primary">
+    <a href="#" class="logo brandmark" aria-label="Mahanthi Kannapalli — home"><span class="logo-badge" aria-hidden="true"><span class="logo-bracket">[</span><span class="logo-mono">MK</span><span class="logo-bracket">]</span></span><span class="logo-word"><span class="logo-first">MAHANTHI</span><span class="logo-last">KANNAPALLI</span></span></a>
+
+    <!-- Mobile toggle (only shows on small screens) -->
+    <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false">
+        <span class="nav-toggle-icon" aria-hidden="true">
+            <span></span><span></span><span></span>
+        </span>
+    </button>
+
+    <ul class="nav-links">
+    <li>
+        <a href="#about">
+            <i class="bx bx-user"></i>
+            <span>About</span>
+        </a>
+    </li>
+
+    <li>
+        <a href="#projects">
+            <i class="bx bx-briefcase-alt-2"></i>
+            <span>Projects</span>
+        </a>
+    </li>
+
+    <li>
+        <a href="#systems">
+            <i class="bx bx-network-chart"></i>
+            <span>Systems</span>
+        </a>
+    </li>
+
+    <li>
+        <a href="#contact">
+            <i class="bx bx-envelope"></i>
+            <span>Contact</span>
+        </a>
+    </li>
+    </ul>
+</nav>
+
+<!-- Mobile overlay (click to close) -->
+<div class="nav-overlay" hidden></div>
+
+<!-- HERO / ABOUT SECTION -->
+<section class="home">
+
+    <!-- unified constellation background is shared across all pages (systems.js) -->
+
+    <!-- optional bars background (if you want to use later) -->
+    <div class="bars-animation">
+        <div class="bar" style="--i:1"></div>
+        <div class="bar" style="--i:2"></div>
+        <div class="bar" style="--i:3"></div>
+        <div class="bar" style="--i:4"></div>
+        <div class="bar" style="--i:5"></div>
+        <div class="bar" style="--i:6"></div>
+        <div class="bar" style="--i:7"></div>
+        <div class="bar" style="--i:8"></div>
+        <div class="bar" style="--i:9"></div>
+        <div class="bar" style="--i:10"></div>
+    </div>
+
+    <div class="center-container">
+
+        <!-- IMAGE -->
+        <div class="home-img">
+            <div class="img-box">
+                <div class="img-item">
+                    <!-- make sure this path is correct on GitHub -->
+                    <img src="images/munna.png" alt="Mahanthi Kannapalli">
+                </div>
+                <span class="portrait-readout">STATUS: ONLINE · SYSTEMS_MIND</span>
+            </div>
+        </div>
+
+        <!-- TEXT BELOW IMAGE -->
+        <div class="text-box">
+            <div class="home-content">
+
+                <span class="sys-eyebrow center"><span class="dot"></span> SYSTEMS&nbsp;ENGINEER</span>
+
+                <!-- anchor target for ABOUT -->
+                <h1 id="about">A.K.A. MUNNA</h1>
+
+                <h2>GAMEPLAY PROGRAMMER | TECHNICAL GAME DESIGNER | SOFTWARE ENGINEER</h2>
+
+                <p class="hero-status" data-lines='["Building systems that feel alive.","Translating math into mechanics.","Unreal · Unity · C++ · C# · Blueprints","Where design, code, and play click together."]'>Building systems that feel alive.</p>
+
+                <p>
+                    Ever since I wrote my first line of code, I’ve been
+                    fascinated by how simple logic can create worlds,
+                    emotions, and possibilities. That curiosity eventually
+                    led me into gameplay programming, where creativity
+                    and engineering meet in the most unexpected ways.
+                </p>
+
+                <p>
+                    I’m Mahanthi Kannapalli — a Gameplay Programmer
+                    and Technical Systems Designer who loves building
+                    interactions that feel alive. I enjoy that moment
+                    when an idea turns into a mechanic, a behavior,
+                    or a system that surprises the player and—even
+                    better—surprises me during development.
+                </p>
+
+                <p>
+                    With a foundation in computer science and
+                    advanced game development studies at SCAD,
+                    I approach every problem with both imagination
+                    and structure. I love translating abstract
+                    concepts into clean systems, and I’m always
+                    chasing that feeling of “flow” where design, code,
+                    and player experience all click together.
+                </p>
+
+                <p>
+                    I’m constantly learning, experimenting, and
+                    growing—driven by the belief that great games
+                    aren’t just played, they’re felt.
+                </p>
+            </div>
+        </div>
+
+    </div>
+
+
+</section>
+
+<!-- right-side section navigation rail (desktop) -->
+<nav id="section-rail" aria-label="Section navigation">
+    <a href="#about"    data-label="About"></a>
+    <a href="#capabilities" data-label="Craft"></a>
+    <a href="#projects" data-label="Games"></a>
+    <a href="#systems"  data-label="Systems"></a>
+    <a href="#contact"  data-label="Contact"></a>
+</nav>
+
+<!-- CAPABILITIES / STACK BAND -->
+<section class="capabilities-section" id="capabilities">
+    <div class="capabilities-inner">
+        <span class="sys-eyebrow center"><span class="dot"></span> // THE&nbsp;SYSTEM</span>
+        <h2 class="capabilities-title">A Connected Craft</h2>
+        <p class="capabilities-sub">Not a checklist — a web of disciplines that feed each other. Hover a node to trace the connections.</p>
+
+        <!-- interactive skill constellation (rendered by systems.js) -->
+        <div class="skillmap" id="skillmap" aria-label="Interactive skill map">
+            <canvas class="skillmap-canvas"></canvas>
+            <div class="skillmap-readout" aria-live="polite">
+                <span class="smr-label">SELECT A NODE</span>
+                <span class="smr-title">Explore the craft</span>
+                <span class="smr-desc">Move across the map to see how each discipline links to the rest.</span>
+            </div>
+        </div>
+
+        <!-- data for the map (read by JS; also a readable fallback list) -->
+        <script type="application/json" id="skillmap-data">
+        {
+          "nodes": [
+            { "id": "gameplay", "label": "Gameplay Programming", "group": "core", "desc": "Designing how a game feels moment-to-moment — mechanics, controls, and the loops that make play satisfying.", "links": ["systems","math","ai","combat","tools"] },
+            { "id": "systems", "label": "Systems Design", "group": "core", "desc": "Architecting the rules and structures beneath a game so complexity stays flexible and reusable.", "links": ["gameplay","procedural","math","narrative","tools"] },
+            { "id": "math", "label": "Applied Mathematics", "group": "core", "desc": "Vectors, curves, weighted models and probability turned into mechanics that behave exactly as intended.", "links": ["gameplay","systems","physics","procedural","ai"] },
+            { "id": "ai", "label": "AI & Behavior", "group": "branch", "desc": "Behavior trees, perception and decision systems that make enemies and agents feel deliberate.", "links": ["gameplay","math","combat"] },
+            { "id": "procedural", "label": "Procedural Generation", "group": "branch", "desc": "Grammars, graph expansion and rule systems that generate worlds, layouts and structures on demand.", "links": ["systems","math","render"] },
+            { "id": "combat", "label": "Combat Systems", "group": "branch", "desc": "Damage models, timing, feedback and dynamic difficulty — the engineering behind a good fight.", "links": ["gameplay","ai","physics"] },
+            { "id": "physics", "label": "Physics & Motion", "group": "branch", "desc": "Movement, traversal and interaction tuned so bodies and objects move with weight and intent.", "links": ["math","combat","render"] },
+            { "id": "tools", "label": "Tools & Pipelines", "group": "branch", "desc": "Editor tooling and data-driven workflows so new content slots in without rewriting core logic.", "links": ["gameplay","systems","render"] },
+            { "id": "narrative", "label": "Narrative & UI Systems", "group": "branch", "desc": "Dialogue engines, branching state and responsive interfaces that carry story and feedback.", "links": ["systems","tools"] },
+            { "id": "render", "label": "Tech Art & Rendering", "group": "branch", "desc": "Shaders, visual systems and the bridge between how a game runs and how it looks.", "links": ["procedural","physics","tools"] }
+          ]
+        }
+        </script>
+
+        <p class="skillmap-hint">— and always expanding. The map grows with every project.</p>
+    </div>
+</section>
+<section class="games-section" id="projects">
+    <div class="games-inner">
+        <span class="sys-eyebrow center"><span class="dot"></span> // 01 — GAME_VAULT</span>
+        <h1 class="games-title">MY-GAMES</h1>
+        <p class="games-subtitle">
+            A selection of systems-driven games I’ve built and programmed.
+        </p>
+
+        <!-- engine + discipline filter -->
+        <div class="filter-bar" role="group" aria-label="Filter projects">
+            <button class="filter-chip active" data-filter="all">All</button>
+            <button class="filter-chip" data-filter="unreal">Unreal</button>
+            <button class="filter-chip" data-filter="unity">Unity</button>
+            <button class="filter-chip" data-filter="combat">Combat</button>
+            <button class="filter-chip" data-filter="ai">AI</button>
+            <button class="filter-chip" data-filter="environment">Environment</button>
+            <button class="filter-chip" data-filter="narrative">Narrative</button>
+        </div>
+        <p class="filter-count">// showing all modules</p>
+
+        <div class="projects-grid">
+            <!-- CARD 1 -->
+            <a class="project-link" href="echos-of-lie.html" data-tags="unreal gameplay horror ai">
+            <article class="project-card">
+                <div class="project-thumb">
+                    <img src="images/echos-of-lie.png" alt="Echos of Lie">
+                </div>
+                <div class="project-body">
+                    <h2 class="project-title">Echos of Lie</h2>
+
+                    <div class="project-tags">
+                        <span>Unreal 5</span>
+                        <span>Gameplay Programming</span>
+                        <span>Horror</span>
+                    </div>
+
+                    <p class="project-desc">
+                        First-person horror game focused on tension, pacing,
+                        and systemic interactions between sanity, light, and
+                        enemy AI.
+                    </p>
+
+                    <ul class="project-list">
+                        <li>Designed and scripted all gameplay systems in Blueprints.</li>
+                        <li>Implemented sanity, health, and inventory mechanics.</li>
+                        <li>Built enemy AI using behavior trees and EQS.</li>
+                    </ul>
+                </div>
+            </article>
+            </a>
+
+            <!-- CARD 2 -->
+            <a class="project-link" href="dynamicattackrate.html" data-tags="unreal blueprints combat">
+            <article class="project-card">
+                <div class="project-thumb">
+                    <img src="images/dynamic-attack-rate.png" alt="Combat Fusion">
+                </div>
+                <div class="project-body">
+                    <h2 class="project-title">Dynamic Attack Rate</h2>
+
+                    <div class="project-tags">
+                        <span>Unreal 5</span>
+                        <span>Blueprints</span>
+                        <span>Combat Systems</span>
+                    </div>
+
+                    <p class="project-desc">
+                        Fast-paced combat prototype built around a dynamic
+                        attack-rate formula, multi-weapon combos, and reactive AI.
+                    </p>
+
+                    <ul class="project-list">
+                        <li>Implemented sword/hammer combo system and special moves.</li>
+                        <li>Created dynamic attack-rate math to reward efficient play.</li>
+                    </ul>
+                </div>
+            </article>
+            </a>
+
+            <!-- CARD 3 -->
+            <a class="project-link" href="thedeadlyscriptmurdercase.html" data-tags="unity narrative csharp">
+            <article class="project-card">
+                <div class="project-thumb">
+                    <img src="images/text-based-game.png" alt="The Deadly Script">
+                </div>
+                <div class="project-body">
+                    <h2 class="project-title">The Deadly Script Murder Case</h2>
+
+                    <div class="project-tags">
+                        <span>Unity</span>
+                        <span>C#</span>
+                        <span>Narrative Systems</span>
+                    </div>
+
+                    <p class="project-desc">
+                        2D text-driven mystery where the story changes based
+                        on player choices, timing, and hidden state variables.
+                    </p>
+
+                    <ul class="project-list">
+                        <li>Built dialogue system with branching choices and state tracking.</li>
+                        <li>Implemented typewriter effects and reactive UI transitions.</li>
+                        <li>Designed tools to author narrative events quickly.</li>
+                    </ul>
+                </div>
+            </article>
+            </a>
+
+            <!-- CARD 4 -->
+            <a class="project-link" href="combatfusion.html" data-tags="unreal blueprints combat ai">
+            <article class="project-card">
+            <div class="project-thumb">
+            <!-- Put your Combat Fusion cover image in /images/ and update the filename if needed -->
+              <img src="images/combat-fusion.png" alt="Combat Fusion">
+            </div>
+
+            <div class="project-body">
+              <h2 class="project-title">Combat Fusion</h2>
+
+            <div class="project-tags">
+                <span>Unreal 5</span>
+                <span>Blueprints</span>
+                <span>Hand Combat</span>
+            </div>
+
+              <p class="project-desc">
+                Hand-combat action game featuring combo attacks, traversal, and combat-focused level design
+                with multiple enemy archetypes.
+              </p>
+
+              <ul class="project-list">
+                <li>Built combo-based melee system and player abilities fully in Blueprints.</li>
+                <li>Designed combat level layouts with traversal + ledge climbing flows.</li>
+                <li>Implemented two enemy types: sword melee AI and rifle ranged AI.</li>
+              </ul>
+            </div>
+          </article>
+        </a>
+
+            <!-- CARD : SIDE SCROLLER -->
+<a class="project-link" href="side-scroller.html" data-tags="unreal 3d sidescroller combat">
+  <article class="project-card">
+    <div class="project-thumb">
+      <img src="images/side-scroller.png" alt="Side Scroller Game">
+    </div>
+
+    <div class="project-body">
+      <h2 class="project-title">Side Scroller</h2>
+
+      <div class="project-tags">
+        <span>Unreal Engine</span>
+        <span>3D</span>
+        <span>Side Scroller</span>
+      </div>
+
+      <p class="project-desc">
+        A side-scroller game built using a fully 3D character and environment,
+        with a fixed front-facing camera for classic side-scroll gameplay.
+      </p>
+
+      <ul class="project-list">
+        <li>3D character and environment with locked camera view</li>
+        <li>Dash, jump, fire, damage, and timer systems</li>
+        <li>Gameplay logic implemented in Unreal Engine</li>
+      </ul>
+    </div>
+  </article>
+</a>
+
+            <!-- CARD : PRIVATE ROOM -->
+<a class="project-link" href="private-room.html" data-tags="environment maya unreal">
+  <article class="project-card">
+    <div class="project-thumb">
+      <img src="images/private-room.png" alt="Private Room Environment">
+    </div>
+
+    <div class="project-body">
+      <h2 class="project-title">Private Room</h2>
+
+      <div class="project-tags">
+        <span>Maya</span>
+        <span>Unreal Engine</span>
+        <span>Environment Art</span>
+      </div>
+
+      <p class="project-desc">
+        A detailed private room environment where all assets were modeled,
+        textured, and prepared in Maya, then assembled and rendered in Unreal Engine.
+      </p>
+
+      <ul class="project-list">
+        <li>All 3D models created from scratch in Maya</li>
+        <li>Texturing and material setup</li>
+        <li>Scene lighting and final render in Unreal Engine</li>
+      </ul>
+    </div>
+  </article>
+</a>
+
+
+        </div>
+    </div>
+</section>
+
+<!-- PROCEDURAL & GAMEPLAY SYSTEMS -->
+<section class="systems-section" id="systems">
+  <div class="systems-inner">
+
+    <span class="sys-eyebrow center"><span class="dot"></span> // 02 — SYSTEM_VAULT</span>
+    <h1 class="systems-title">PROCEDURAL & GAMEPLAY SYSTEMS</h1>
+    <p class="systems-subtitle">
+      Algorithm-driven gameplay and procedural systems exploring
+      generation, evaluation, and simulation.
+    </p>
+
+    <div class="systems-grid">
+
+      <!-- SYSTEM 1 -->
+      <a class="project-link" href="prims-maze.html">
+        <article class="system-card">
+        <h2 class="system-title">
+          Procedural Maze Generation System (Prim’s Algorithm)
+        </h2>
+
+        <div class="system-tags">
+          <span>Procedural Generation</span>
+          <span>Algorithms</span>
+          <span>Level Systems</span>
+        </div>
+
+        <p class="system-desc">
+          A procedural maze generation system implemented using Prim’s
+          algorithm to create structured and solvable maze layouts
+          suitable for gameplay and level design.
+        </p>
+      </article>
+      </a>
+
+      <!-- SYSTEM 2 -->
+      <a class="project-link" href="camera-visibility-scoring.html">
+        <article class="system-card">
+        <h2 class="system-title">
+          Camera-Based Visibility Scoring System
+        </h2>
+
+        <div class="system-tags">
+          <span>Camera Systems</span>
+          <span>Visibility Analysis</span>
+          <span>Gameplay Evaluation</span>
+        </div>
+
+        <p class="system-desc">
+          A camera-driven system that captures images and assigns a
+          visibility score based on how much of a target object is
+          present in the frame, enabling objective feedback on
+          composition and visibility.
+        </p>
+      </article>
+      </a>
+
+      <!-- SYSTEM 3 -->
+    <a class="project-link" href="l-system-trees.html">
+      <article class="system-card">
+        <h2 class="system-title">
+          Procedural Tree Generation System (L-Systems)
+        </h2>
+
+        <div class="system-tags">
+          <span>Procedural Modeling</span>
+          <span>L-Systems</span>
+          <span>3D Generation</span>
+        </div>
+
+        <p class="system-desc">
+          A procedural vegetation system using L-systems to generate
+          3D tree structures through recursive rule expansion and
+          spatial transformations.
+        </p>
+      </article>
+    </a>
+
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="contact-section">
+    <div class="contact-inner">
+
+        <span class="sys-eyebrow center"><span class="dot"></span> // 03 — ESTABLISH_CONNECTION</span>
+        <h2 class="contact-title">Let’s Connect</h2>
+        <p class="contact-subtitle">
+            If you’d like to talk about gameplay programming, systems design, collaborations,
+            or opportunities, feel free to reach out.
+        </p>
+
+        <a class="contact-email" href="mailto:mahanthikannapalli@gmail.com">
+            mahanthikannapalli@gmail.com
+        </a>
+
+        <div class="contact-socials">
+
+            <!-- LinkedIn -->
+            <a href="https://www.linkedin.com/in/mahanthi-kannapalli" target="_blank" aria-label="LinkedIn">
+                <i class='bx bxl-linkedin'></i>
+            </a>
+
+            <!-- YouTube -->
+            <a href="https://youtube.com/@mahanthikannapalli?si=JRhAWhkRP3fmB1TG" target="_blank" aria-label="YouTube">
+                <i class='bx bxl-youtube'></i>
+            </a>
+
+            <!-- Instagram -->
+            <a href="https://www.instagram.com/_99munna?igsh=MXV4bnplazBkeW5scA%3D%3D&utm_source=qr" target="_blank" aria-label="Instagram">
+                <i class='bx bxl-instagram'></i>
+            </a>
+
+            <!-- Twitter / X -->
+            <a href="https://x.com/mahanthimunna01?s=21&t=PDKtDoIuhaVYPOOj1EA6Kg" target="_blank" aria-label="Twitter / X">
+                <i class='bx bxl-twitter'></i>
+            </a>
+
+            <!-- Gmail -->
+            <a href="mailto:mahanthikannapalli@gmail.com" aria-label="Email">
+                <i class='bx bxl-gmail'></i>
+            </a>
+
+        </div>
+
+        <p class="contact-footer">
+            © 2025 Mahanthi Kannapalli · Built with passion, creativity, and a love for game development.
+        </p>
+
+    </div>
+</section>
+
+<!-- Loader fade-out script -->
+<script>
+    window.addEventListener("load", () => {
+        const loader = document.getElementById("loader");
+        if (!loader) {
+            document.body.classList.add("page-ready");
+            return;
+        }
+
+        // Explosion duration before fade-out starts (in ms)
+        setTimeout(() => {
+            loader.classList.add("fade-out");
+
+            // 🔹 Start navbar + text-box animations at the same time
+            document.body.classList.add("page-ready");
+        }, 1800);
+    });
+</script>
+<script>
+  (function () {
+    const btn = document.querySelector(".nav-toggle");
+    const links = document.querySelector(".nav-links");
+    const overlay = document.querySelector(".nav-overlay");
+
+    if (!btn || !links || !overlay) return;
+
+    function openMenu() {
+      document.body.classList.add("nav-open");
+      btn.setAttribute("aria-expanded", "true");
+      btn.setAttribute("aria-label", "Close menu");
+      overlay.hidden = false;
+    }
+
+    function closeMenu() {
+      document.body.classList.remove("nav-open");
+      btn.setAttribute("aria-expanded", "false");
+      btn.setAttribute("aria-label", "Open menu");
+      overlay.hidden = true;
+    }
+
+    btn.addEventListener("click", () => {
+      document.body.classList.contains("nav-open") ? closeMenu() : openMenu();
+    });
+
+    overlay.addEventListener("click", closeMenu);
+
+    // Close when clicking a link (mobile)
+    links.querySelectorAll("a").forEach(a => a.addEventListener("click", closeMenu));
+
+    // Close on Escape
+    window.addEventListener("keydown", (e) => {
+      if (e.key === "Escape") closeMenu();
+    });
+
+    // If resized to desktop, ensure menu is reset
+    window.addEventListener("resize", () => {
+      if (window.innerWidth > 860) closeMenu();
+    });
+  })();
+</script>
+
+<!-- shared 3D / scroll / interaction engine -->
+<script src="systems.js" defer></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
